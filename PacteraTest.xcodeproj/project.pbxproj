@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70374D131AB24D600014C21B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D121AB24D600014C21B /* main.m */; };
+		70374D161AB24D600014C21B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D151AB24D600014C21B /* AppDelegate.m */; };
+		70374D2D1AB24D600014C21B /* PacteraTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D2C1AB24D600014C21B /* PacteraTestTests.m */; };
+		70374D3A1AB24E200014C21B /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70374D361AB24E200014C21B /* Default-736h@3x.png */; };
+		70374D3B1AB24E200014C21B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 70374D371AB24E200014C21B /* Default.png */; };
+		70374D3C1AB24E200014C21B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70374D381AB24E200014C21B /* Default@2x.png */; };
+		70374D3D1AB24E200014C21B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70374D391AB24E200014C21B /* Default-568h@2x.png */; };
+		70374D581AB24EE00014C21B /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D411AB24EE00014C21B /* CDataScanner.m */; };
+		70374D591AB24EE00014C21B /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D441AB24EE00014C21B /* CFilteringJSONSerializer.m */; };
+		70374D5A1AB24EE00014C21B /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D461AB24EE00014C21B /* CJSONDeserializer_BlocksExtensions.m */; };
+		70374D5B1AB24EE00014C21B /* CJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D481AB24EE00014C21B /* CJSONSerialization.m */; };
+		70374D5C1AB24EE00014C21B /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D4A1AB24EE00014C21B /* CJSONSerializedData.m */; };
+		70374D5D1AB24EE00014C21B /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D4D1AB24EE00014C21B /* CDataScanner_Extensions.m */; };
+		70374D5E1AB24EE00014C21B /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D4F1AB24EE00014C21B /* NSDictionary_JSONExtensions.m */; };
+		70374D5F1AB24EE00014C21B /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D521AB24EE00014C21B /* CJSONDeserializer.m */; };
+		70374D601AB24EE00014C21B /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D541AB24EE00014C21B /* CJSONScanner.m */; };
+		70374D611AB24EE00014C21B /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D561AB24EE00014C21B /* CJSONSerializer.m */; };
+		70374D651AB250B40014C21B /* PCTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D641AB250B40014C21B /* PCTNavigationController.m */; };
+		70374D681AB250F50014C21B /* PCTFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D671AB250F50014C21B /* PCTFeedTableViewController.m */; };
+		70374D6C1AB252460014C21B /* PCTFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D6B1AB252460014C21B /* PCTFeedTableViewCell.m */; };
+		70374D6F1AB252B80014C21B /* PCTImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D6E1AB252B80014C21B /* PCTImageView.m */; };
+		70374D731AB253B20014C21B /* PCTImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D721AB253B20014C21B /* PCTImageCache.m */; };
+		70374D761AB254240014C21B /* PCTFeedRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D751AB254240014C21B /* PCTFeedRecord.m */; };
+		70374D791AB254A40014C21B /* PCTFeedLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D781AB254A40014C21B /* PCTFeedLoader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70374D271AB24D600014C21B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70374D051AB24D600014C21B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70374D0C1AB24D600014C21B;
+			remoteInfo = PacteraTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70374D0D1AB24D600014C21B /* PacteraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacteraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70374D111AB24D600014C21B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70374D121AB24D600014C21B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		70374D141AB24D600014C21B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		70374D151AB24D600014C21B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		70374D261AB24D600014C21B /* PacteraTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PacteraTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70374D2B1AB24D600014C21B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70374D2C1AB24D600014C21B /* PacteraTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PacteraTestTests.m; sourceTree = "<group>"; };
+		70374D361AB24E200014C21B /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		70374D371AB24E200014C21B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		70374D381AB24E200014C21B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		70374D391AB24E200014C21B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		70374D401AB24EE00014C21B /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		70374D411AB24EE00014C21B /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		70374D431AB24EE00014C21B /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
+		70374D441AB24EE00014C21B /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
+		70374D451AB24EE00014C21B /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
+		70374D461AB24EE00014C21B /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
+		70374D471AB24EE00014C21B /* CJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerialization.h; sourceTree = "<group>"; };
+		70374D481AB24EE00014C21B /* CJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerialization.m; sourceTree = "<group>"; };
+		70374D491AB24EE00014C21B /* CJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializedData.h; sourceTree = "<group>"; };
+		70374D4A1AB24EE00014C21B /* CJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializedData.m; sourceTree = "<group>"; };
+		70374D4C1AB24EE00014C21B /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		70374D4D1AB24EE00014C21B /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		70374D4E1AB24EE00014C21B /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		70374D4F1AB24EE00014C21B /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		70374D511AB24EE00014C21B /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		70374D521AB24EE00014C21B /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		70374D531AB24EE00014C21B /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		70374D541AB24EE00014C21B /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		70374D551AB24EE00014C21B /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		70374D561AB24EE00014C21B /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		70374D571AB24EE00014C21B /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		70374D631AB250B40014C21B /* PCTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTNavigationController.h; path = Controllers/PCTNavigationController.h; sourceTree = "<group>"; };
+		70374D641AB250B40014C21B /* PCTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTNavigationController.m; path = Controllers/PCTNavigationController.m; sourceTree = "<group>"; };
+		70374D661AB250F50014C21B /* PCTFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTFeedTableViewController.h; path = Controllers/PCTFeedTableViewController.h; sourceTree = "<group>"; };
+		70374D671AB250F50014C21B /* PCTFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTFeedTableViewController.m; path = Controllers/PCTFeedTableViewController.m; sourceTree = "<group>"; };
+		70374D6A1AB252460014C21B /* PCTFeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTFeedTableViewCell.h; path = Views/PCTFeedTableViewCell.h; sourceTree = "<group>"; };
+		70374D6B1AB252460014C21B /* PCTFeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTFeedTableViewCell.m; path = Views/PCTFeedTableViewCell.m; sourceTree = "<group>"; };
+		70374D6D1AB252B80014C21B /* PCTImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTImageView.h; path = Views/PCTImageView.h; sourceTree = "<group>"; };
+		70374D6E1AB252B80014C21B /* PCTImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTImageView.m; path = Views/PCTImageView.m; sourceTree = "<group>"; };
+		70374D711AB253B20014C21B /* PCTImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTImageCache.h; path = Models/PCTImageCache.h; sourceTree = "<group>"; };
+		70374D721AB253B20014C21B /* PCTImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTImageCache.m; path = Models/PCTImageCache.m; sourceTree = "<group>"; };
+		70374D741AB254240014C21B /* PCTFeedRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTFeedRecord.h; path = Models/PCTFeedRecord.h; sourceTree = "<group>"; };
+		70374D751AB254240014C21B /* PCTFeedRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTFeedRecord.m; path = Models/PCTFeedRecord.m; sourceTree = "<group>"; };
+		70374D771AB254A40014C21B /* PCTFeedLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTFeedLoader.h; path = Models/PCTFeedLoader.h; sourceTree = "<group>"; };
+		70374D781AB254A40014C21B /* PCTFeedLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTFeedLoader.m; path = Models/PCTFeedLoader.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70374D0A1AB24D600014C21B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70374D231AB24D600014C21B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70374D041AB24D600014C21B = {
+			isa = PBXGroup;
+			children = (
+				70374D0F1AB24D600014C21B /* PacteraTest */,
+				70374D291AB24D600014C21B /* PacteraTestTests */,
+				70374D0E1AB24D600014C21B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70374D0E1AB24D600014C21B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70374D0D1AB24D600014C21B /* PacteraTest.app */,
+				70374D261AB24D600014C21B /* PacteraTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70374D0F1AB24D600014C21B /* PacteraTest */ = {
+			isa = PBXGroup;
+			children = (
+				70374D701AB2537F0014C21B /* Models */,
+				70374D691AB251F80014C21B /* Views */,
+				70374D621AB24F1E0014C21B /* Controllers */,
+				70374D3E1AB24E290014C21B /* Vendors */,
+				70374D141AB24D600014C21B /* AppDelegate.h */,
+				70374D151AB24D600014C21B /* AppDelegate.m */,
+				70374D101AB24D600014C21B /* Supporting Files */,
+			);
+			path = PacteraTest;
+			sourceTree = "<group>";
+		};
+		70374D101AB24D600014C21B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70374D361AB24E200014C21B /* Default-736h@3x.png */,
+				70374D371AB24E200014C21B /* Default.png */,
+				70374D381AB24E200014C21B /* Default@2x.png */,
+				70374D391AB24E200014C21B /* Default-568h@2x.png */,
+				70374D111AB24D600014C21B /* Info.plist */,
+				70374D121AB24D600014C21B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70374D291AB24D600014C21B /* PacteraTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				70374D2C1AB24D600014C21B /* PacteraTestTests.m */,
+				70374D2A1AB24D600014C21B /* Supporting Files */,
+			);
+			path = PacteraTestTests;
+			sourceTree = "<group>";
+		};
+		70374D2A1AB24D600014C21B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70374D2B1AB24D600014C21B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70374D3E1AB24E290014C21B /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				70374D3F1AB24EE00014C21B /* TouchJSON */,
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		70374D3F1AB24EE00014C21B /* TouchJSON */ = {
+			isa = PBXGroup;
+			children = (
+				70374D401AB24EE00014C21B /* CDataScanner.h */,
+				70374D411AB24EE00014C21B /* CDataScanner.m */,
+				70374D421AB24EE00014C21B /* Experimental */,
+				70374D4B1AB24EE00014C21B /* Extensions */,
+				70374D501AB24EE00014C21B /* JSON */,
+			);
+			name = TouchJSON;
+			path = Vendors/TouchJSON;
+			sourceTree = "<group>";
+		};
+		70374D421AB24EE00014C21B /* Experimental */ = {
+			isa = PBXGroup;
+			children = (
+				70374D431AB24EE00014C21B /* CFilteringJSONSerializer.h */,
+				70374D441AB24EE00014C21B /* CFilteringJSONSerializer.m */,
+				70374D451AB24EE00014C21B /* CJSONDeserializer_BlocksExtensions.h */,
+				70374D461AB24EE00014C21B /* CJSONDeserializer_BlocksExtensions.m */,
+				70374D471AB24EE00014C21B /* CJSONSerialization.h */,
+				70374D481AB24EE00014C21B /* CJSONSerialization.m */,
+				70374D491AB24EE00014C21B /* CJSONSerializedData.h */,
+				70374D4A1AB24EE00014C21B /* CJSONSerializedData.m */,
+			);
+			path = Experimental;
+			sourceTree = "<group>";
+		};
+		70374D4B1AB24EE00014C21B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70374D4C1AB24EE00014C21B /* CDataScanner_Extensions.h */,
+				70374D4D1AB24EE00014C21B /* CDataScanner_Extensions.m */,
+				70374D4E1AB24EE00014C21B /* NSDictionary_JSONExtensions.h */,
+				70374D4F1AB24EE00014C21B /* NSDictionary_JSONExtensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		70374D501AB24EE00014C21B /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				70374D511AB24EE00014C21B /* CJSONDeserializer.h */,
+				70374D521AB24EE00014C21B /* CJSONDeserializer.m */,
+				70374D531AB24EE00014C21B /* CJSONScanner.h */,
+				70374D541AB24EE00014C21B /* CJSONScanner.m */,
+				70374D551AB24EE00014C21B /* CJSONSerializer.h */,
+				70374D561AB24EE00014C21B /* CJSONSerializer.m */,
+				70374D571AB24EE00014C21B /* JSONRepresentation.h */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		70374D621AB24F1E0014C21B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				70374D631AB250B40014C21B /* PCTNavigationController.h */,
+				70374D641AB250B40014C21B /* PCTNavigationController.m */,
+				70374D661AB250F50014C21B /* PCTFeedTableViewController.h */,
+				70374D671AB250F50014C21B /* PCTFeedTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		70374D691AB251F80014C21B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70374D6A1AB252460014C21B /* PCTFeedTableViewCell.h */,
+				70374D6B1AB252460014C21B /* PCTFeedTableViewCell.m */,
+				70374D6D1AB252B80014C21B /* PCTImageView.h */,
+				70374D6E1AB252B80014C21B /* PCTImageView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		70374D701AB2537F0014C21B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				70374D711AB253B20014C21B /* PCTImageCache.h */,
+				70374D721AB253B20014C21B /* PCTImageCache.m */,
+				70374D741AB254240014C21B /* PCTFeedRecord.h */,
+				70374D751AB254240014C21B /* PCTFeedRecord.m */,
+				70374D771AB254A40014C21B /* PCTFeedLoader.h */,
+				70374D781AB254A40014C21B /* PCTFeedLoader.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70374D0C1AB24D600014C21B /* PacteraTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70374D301AB24D600014C21B /* Build configuration list for PBXNativeTarget "PacteraTest" */;
+			buildPhases = (
+				70374D091AB24D600014C21B /* Sources */,
+				70374D0A1AB24D600014C21B /* Frameworks */,
+				70374D0B1AB24D600014C21B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacteraTest;
+			productName = PacteraTest;
+			productReference = 70374D0D1AB24D600014C21B /* PacteraTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70374D251AB24D600014C21B /* PacteraTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70374D331AB24D600014C21B /* Build configuration list for PBXNativeTarget "PacteraTestTests" */;
+			buildPhases = (
+				70374D221AB24D600014C21B /* Sources */,
+				70374D231AB24D600014C21B /* Frameworks */,
+				70374D241AB24D600014C21B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70374D281AB24D600014C21B /* PBXTargetDependency */,
+			);
+			name = PacteraTestTests;
+			productName = PacteraTestTests;
+			productReference = 70374D261AB24D600014C21B /* PacteraTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70374D051AB24D600014C21B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Lubor Kolacny";
+				TargetAttributes = {
+					70374D0C1AB24D600014C21B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					70374D251AB24D600014C21B = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 70374D0C1AB24D600014C21B;
+					};
+				};
+			};
+			buildConfigurationList = 70374D081AB24D600014C21B /* Build configuration list for PBXProject "PacteraTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70374D041AB24D600014C21B;
+			productRefGroup = 70374D0E1AB24D600014C21B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70374D0C1AB24D600014C21B /* PacteraTest */,
+				70374D251AB24D600014C21B /* PacteraTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70374D0B1AB24D600014C21B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70374D3C1AB24E200014C21B /* Default@2x.png in Resources */,
+				70374D3D1AB24E200014C21B /* Default-568h@2x.png in Resources */,
+				70374D3A1AB24E200014C21B /* Default-736h@3x.png in Resources */,
+				70374D3B1AB24E200014C21B /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70374D241AB24D600014C21B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70374D091AB24D600014C21B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70374D5B1AB24EE00014C21B /* CJSONSerialization.m in Sources */,
+				70374D5E1AB24EE00014C21B /* NSDictionary_JSONExtensions.m in Sources */,
+				70374D6C1AB252460014C21B /* PCTFeedTableViewCell.m in Sources */,
+				70374D591AB24EE00014C21B /* CFilteringJSONSerializer.m in Sources */,
+				70374D761AB254240014C21B /* PCTFeedRecord.m in Sources */,
+				70374D681AB250F50014C21B /* PCTFeedTableViewController.m in Sources */,
+				70374D611AB24EE00014C21B /* CJSONSerializer.m in Sources */,
+				70374D601AB24EE00014C21B /* CJSONScanner.m in Sources */,
+				70374D5D1AB24EE00014C21B /* CDataScanner_Extensions.m in Sources */,
+				70374D5F1AB24EE00014C21B /* CJSONDeserializer.m in Sources */,
+				70374D161AB24D600014C21B /* AppDelegate.m in Sources */,
+				70374D131AB24D600014C21B /* main.m in Sources */,
+				70374D731AB253B20014C21B /* PCTImageCache.m in Sources */,
+				70374D5A1AB24EE00014C21B /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				70374D791AB254A40014C21B /* PCTFeedLoader.m in Sources */,
+				70374D5C1AB24EE00014C21B /* CJSONSerializedData.m in Sources */,
+				70374D581AB24EE00014C21B /* CDataScanner.m in Sources */,
+				70374D6F1AB252B80014C21B /* PCTImageView.m in Sources */,
+				70374D651AB250B40014C21B /* PCTNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70374D221AB24D600014C21B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70374D2D1AB24D600014C21B /* PacteraTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70374D281AB24D600014C21B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70374D0C1AB24D600014C21B /* PacteraTest */;
+			targetProxy = 70374D271AB24D600014C21B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		70374D2E1AB24D600014C21B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		70374D2F1AB24D600014C21B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70374D311AB24D600014C21B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				INFOPLIST_FILE = PacteraTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70374D321AB24D600014C21B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				INFOPLIST_FILE = PacteraTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		70374D341AB24D600014C21B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PacteraTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PacteraTest.app/PacteraTest";
+			};
+			name = Debug;
+		};
+		70374D351AB24D600014C21B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PacteraTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PacteraTest.app/PacteraTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70374D081AB24D600014C21B /* Build configuration list for PBXProject "PacteraTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70374D2E1AB24D600014C21B /* Debug */,
+				70374D2F1AB24D600014C21B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70374D301AB24D600014C21B /* Build configuration list for PBXNativeTarget "PacteraTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70374D311AB24D600014C21B /* Debug */,
+				70374D321AB24D600014C21B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		70374D331AB24D600014C21B /* Build configuration list for PBXNativeTarget "PacteraTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70374D341AB24D600014C21B /* Debug */,
+				70374D351AB24D600014C21B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70374D051AB24D600014C21B /* Project object */;
+}
