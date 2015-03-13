@@ -10,6 +10,7 @@
 #import "PCTImageCache.h"
 
 #define CELL_WIDTH ([[UIScreen mainScreen] bounds].size.width - 16)
+#define CELL_HEIGHT ([[UIScreen mainScreen] bounds].size.height - 16)
 #define CELL_MAX_HEIGHT 9999
 
 CGSize textSizeUsingBlueFont(NSString * text) {
@@ -61,6 +62,12 @@ CGFloat imageHeight(NSString * stringUrl) {
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    CGFloat cell_width;
+    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) || (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1)) {
+        cell_width = CELL_WIDTH;
+    } else {
+        cell_width = CELL_HEIGHT;
+    }
     
     // position subviews
     CGSize titleSize = textSizeUsingBlueFont(_titleLabel.text);
@@ -78,9 +85,9 @@ CGFloat imageHeight(NSString * stringUrl) {
     _descriptionLabel.frame = frame;
     
     frame = CGRectZero;
-    frame.origin.x = 8 + CELL_WIDTH * (2.f/3.f);
+    frame.origin.x = 8 + cell_width * (2.f/3.f);
     frame.origin.y += _titleLabel.frame.size.height + 8;
-    frame.size.width = (CELL_WIDTH * (1.f/3.f)) - 24;
+    frame.size.width = (cell_width * (1.f/3.f)) - 24;
     if (_pictureImageView.image.size.width > 0) {
         frame.size.height = _pictureImageView.image.size.height * (frame.size.width / _pictureImageView.image.size.width);
         _pictureImageView.frame = frame;

@@ -33,6 +33,15 @@
     [self.tableView registerClass:[PCTFeedTableViewCell class] forCellReuseIdentifier:kFeedCell];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+    // add reload button
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadAll)];
+    
+    // pull to refresh
+    self.refreshControl = [[[UIRefreshControl alloc] init] autorelease];
+    self.refreshControl.attributedTitle = [[[NSAttributedString alloc] initWithString:@"Pull to Refresh"] autorelease];
+    [self.refreshControl addTarget:self action:@selector(reloadAll) forControlEvents:UIControlEventValueChanged];
+
 
 }
 
@@ -46,8 +55,29 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         self.navigationItem.title = _loader.title;
         [self.tableView reloadData];
+        if (self.refreshControl) {
+            [self.refreshControl endRefreshing];
+        }
     });
 }
+
+- (void)reloadAll {
+    [_loader release];
+    _loader = nil;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.navigationItem.title = @"P A C T E R A (Refresh)";
+        [self.tableView reloadData];
+    });
+    //init new one
+    _loader = [[PCTFeedLoader alloc] init];
+    //clear cache
+    [[PCTImageCache sharedCache]removeAllObjects];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self dataUpdated];
+}
+
 
 #pragma mark - Table view data source
 
@@ -78,6 +108,7 @@
     PCTFeedRecord *record = [_loader rowAtIndex:indexPath.row];
     cell.tag = indexPath.row;
     // configure cell
+    cell.pictureImageView.image = nil;
     cell.titleLabel.text = record.title;
     cell.descriptionLabel.text = record.description;
     cell.pictureImageView.urlString = record.imageHref;
