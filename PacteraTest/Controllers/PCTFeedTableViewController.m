@@ -109,6 +109,7 @@
     cell.tag = indexPath.row;
     // configure cell
     cell.pictureImageView.image = nil;
+    cell.pictureImageView.urlString = @"";
     cell.titleLabel.text = record.title;
     cell.descriptionLabel.text = record.description;
     cell.pictureImageView.urlString = record.imageHref;
