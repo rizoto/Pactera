@@ -32,9 +32,15 @@
             if (image) {
                 [[PCTImageCache sharedCache]setObject:image forKey:_urlString];
                 self.image = image;
-                [[NSNotificationCenter defaultCenter] postNotificationName:kDataUpdated object:nil];
+                [[NSNotificationCenter defaultCenter] postNotificationName:kImageUpdated object:nil];
             }
         });
+    }
+}
+
+- (void)updateImageFromCache {
+    if ([[PCTImageCache sharedCache] objectForKey:_urlString]) {
+        self.image = [[PCTImageCache sharedCache] objectForKey:_urlString];
     }
 }
 

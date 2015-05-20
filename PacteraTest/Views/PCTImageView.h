@@ -12,4 +12,6 @@
 
 @property (copy,nonatomic,setter=setUrlString:) NSString *urlString;
 
+- (void)updateImageFromCache;
+
 @end

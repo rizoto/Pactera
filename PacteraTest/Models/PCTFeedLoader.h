@@ -7,6 +7,7 @@
 //
 
 #define kDataUpdated    @"kDataUpdated"
+#define kImageUpdated    @"kImageUpdated"
 
 #import <Foundation/Foundation.h>
 #import "PCTFeedRecord.h"

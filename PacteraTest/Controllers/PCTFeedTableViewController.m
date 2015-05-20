@@ -28,6 +28,7 @@
     self.navigationItem.title = @"P A C T E R A";
     _loader = [[PCTFeedLoader alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataUpdated) name:kDataUpdated object:nil];
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataImageUpdated) name:kImageUpdated object:nil];
     
     // register cell class
     [self.tableView registerClass:[PCTFeedTableViewCell class] forCellReuseIdentifier:kFeedCell];
@@ -49,6 +50,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kDataUpdated object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kImageUpdated object:nil];
 }
 
 - (void)dataUpdated {
@@ -58,6 +60,16 @@
         if (self.refreshControl) {
             [self.refreshControl endRefreshing];
         }
+    });
+}
+
+- (void)dataImageUpdated {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSArray *cells = [self.tableView visibleCells];
+        for (PCTFeedTableViewCell* cell in cells) {
+            [cell.pictureImageView updateImageFromCache];
+        }
+        [self.tableView reloadData];
     });
 }
 
@@ -103,6 +115,7 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     // Configure the cell...
+    // cell.layer.shouldRasterize = YES;
     
     // get data for the row
     PCTFeedRecord *record = [_loader rowAtIndex:indexPath.row];
@@ -113,7 +126,7 @@
     cell.titleLabel.text = record.title;
     cell.descriptionLabel.text = record.description;
     cell.pictureImageView.urlString = record.imageHref;
-    
+
     return cell;
 }
 

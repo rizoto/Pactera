@@ -562,6 +562,7 @@
 				70374D321AB24D600014C21B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70374D331AB24D600014C21B /* Build configuration list for PBXNativeTarget "PacteraTestTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +571,7 @@
 				70374D351AB24D600014C21B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
