@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CEC50671B0DB704000E29B9 /* PCTImageCacheTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC50661B0DB704000E29B9 /* PCTImageCacheTableViewController.m */; };
 		70374D131AB24D600014C21B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D121AB24D600014C21B /* main.m */; };
 		70374D161AB24D600014C21B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D151AB24D600014C21B /* AppDelegate.m */; };
 		70374D2D1AB24D600014C21B /* PacteraTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D2C1AB24D600014C21B /* PacteraTestTests.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CEC50651B0DB704000E29B9 /* PCTImageCacheTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTImageCacheTableViewController.h; path = Controllers/PCTImageCacheTableViewController.h; sourceTree = "<group>"; };
+		2CEC50661B0DB704000E29B9 /* PCTImageCacheTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTImageCacheTableViewController.m; path = Controllers/PCTImageCacheTableViewController.m; sourceTree = "<group>"; };
 		70374D0D1AB24D600014C21B /* PacteraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacteraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70374D111AB24D600014C21B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70374D121AB24D600014C21B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				70374D641AB250B40014C21B /* PCTNavigationController.m */,
 				70374D661AB250F50014C21B /* PCTFeedTableViewController.h */,
 				70374D671AB250F50014C21B /* PCTFeedTableViewController.m */,
+				2CEC50651B0DB704000E29B9 /* PCTImageCacheTableViewController.h */,
+				2CEC50661B0DB704000E29B9 /* PCTImageCacheTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				70374D601AB24EE00014C21B /* CJSONScanner.m in Sources */,
 				70374D5D1AB24EE00014C21B /* CDataScanner_Extensions.m in Sources */,
 				70374D5F1AB24EE00014C21B /* CJSONDeserializer.m in Sources */,
+				2CEC50671B0DB704000E29B9 /* PCTImageCacheTableViewController.m in Sources */,
 				70374D161AB24D600014C21B /* AppDelegate.m in Sources */,
 				70374D131AB24D600014C21B /* main.m in Sources */,
 				70374D731AB253B20014C21B /* PCTImageCache.m in Sources */,

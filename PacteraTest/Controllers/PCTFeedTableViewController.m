@@ -12,6 +12,7 @@
 #import "PCTImageCache.h"
 #import "PCTFeedLoader.h"
 #import "PCTFeedTableViewCell.h"
+#import "PCTImageCacheTableViewController.h"
 
 @interface PCTFeedTableViewController ()
 {
@@ -36,7 +37,10 @@
     self.tableView.delegate = self;
     
     // add reload button
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadAll)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadAll)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(showImageCache)];
+    
     
     // pull to refresh
     self.refreshControl = [[[UIRefreshControl alloc] init] autorelease];
@@ -65,11 +69,16 @@
 
 - (void)dataImageUpdated {
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSArray *cells = [self.tableView visibleCells];
-        for (PCTFeedTableViewCell* cell in cells) {
+        //[self.tableView reloadData];
+//        NSArray *cells = [self.tableView visibleCells];
+        NSArray *visiblePaths = [self.tableView indexPathsForVisibleRows];
+//        for (PCTFeedTableViewCell* cell in cells) {
+//            [cell.pictureImageView updateImageFromCache];
+//        }
+        for(NSIndexPath *indexPath in visiblePaths) {
+            PCTFeedTableViewCell* cell = (id)[self.tableView cellForRowAtIndexPath:indexPath];
             [cell.pictureImageView updateImageFromCache];
         }
-        [self.tableView reloadData];
     });
 }
 
@@ -84,6 +93,11 @@
     _loader = [[PCTFeedLoader alloc] init];
     //clear cache
     [[PCTImageCache sharedCache]removeAllObjects];
+    [[[PCTImageCache sharedCache] loadingURLs]removeAllObjects];
+}
+
+- (void)showImageCache {
+    [self.navigationController pushViewController:[PCTImageCacheTableViewController new] animated:YES];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
@@ -121,8 +135,8 @@
     PCTFeedRecord *record = [_loader rowAtIndex:indexPath.row];
     cell.tag = indexPath.row;
     // configure cell
-    cell.pictureImageView.image = nil;
     cell.pictureImageView.urlString = @"";
+    cell.pictureImageView.image = nil;
     cell.titleLabel.text = record.title;
     cell.descriptionLabel.text = record.description;
     cell.pictureImageView.urlString = record.imageHref;

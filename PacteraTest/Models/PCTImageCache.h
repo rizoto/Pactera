@@ -10,6 +10,8 @@
 
 @interface PCTImageCache : NSCache
 
+@property (strong,atomic) NSMutableSet* loadingURLs;
+
 + (id)sharedCache;
 
 @end
