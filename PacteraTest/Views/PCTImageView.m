@@ -27,29 +27,34 @@
         self.image = [[PCTImageCache sharedCache] objectForKey:_urlString];
     } else {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+            // to save image for correct url
+            NSString* _urlStringCopy = [[_urlString copy] autorelease];
             @synchronized([[PCTImageCache sharedCache] loadingURLs]) {
-                if ([[[PCTImageCache sharedCache] loadingURLs] containsObject:_urlString]) {
+                if ([[[PCTImageCache sharedCache] loadingURLs] containsObject:_urlStringCopy]) {
                     return;
                 } else {
-                    [[[PCTImageCache sharedCache] loadingURLs] addObject:_urlString];
+                    [[[PCTImageCache sharedCache] loadingURLs] addObject:_urlStringCopy];
                 }
             }
-            NSLog(@"Loading: %@",_urlString);
-            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:_urlString]];
+            NSLog(@"Loading: %@,%p",_urlStringCopy,self);
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:_urlStringCopy]];
             UIImage *image = [UIImage imageWithData:imageData];
             if (image) {
-                [[PCTImageCache sharedCache]setObject:image forKey:_urlString];
-                self.image = image;
-                NSLog(@"Loaded: %@",_urlString);
-                [[NSNotificationCenter defaultCenter] postNotificationName:kImageUpdated object:nil];
+                [[PCTImageCache sharedCache]setObject:image forKey:_urlStringCopy];
+                //self.image = image;
+                NSLog(@"Loaded: %@,%p",_urlStringCopy,self);
+                [[NSNotificationCenter defaultCenter] postNotificationName:kImageUpdated object:nil userInfo:@{@"urlString":_urlStringCopy}];
             }
         });
     }
 }
 
 - (void)updateImageFromCache {
+    UIImage* image ;
     if ([[PCTImageCache sharedCache] objectForKey:_urlString]) {
-        self.image = [[PCTImageCache sharedCache] objectForKey:_urlString];
+        image = [[PCTImageCache sharedCache] objectForKey:_urlString];
+        self.image = image;
+        //[self.superview setNeedsLayout];
     }
 }
 

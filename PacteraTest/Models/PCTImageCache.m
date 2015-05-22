@@ -15,7 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         cache = [[self alloc] init];
-        cache.loadingURLs = [NSMutableSet new];
+        cache.loadingURLs = [[NSMutableSet new] autorelease];
     });
     return cache;
 }

@@ -29,7 +29,7 @@
     self.navigationItem.title = @"P A C T E R A";
     _loader = [[PCTFeedLoader alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataUpdated) name:kDataUpdated object:nil];
-     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataImageUpdated) name:kImageUpdated object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataImageUpdated:) name:kImageUpdated object:nil];
     
     // register cell class
     [self.tableView registerClass:[PCTFeedTableViewCell class] forCellReuseIdentifier:kFeedCell];
@@ -67,17 +67,16 @@
     });
 }
 
-- (void)dataImageUpdated {
+- (void)dataImageUpdated:(NSNotification*)notification {
     dispatch_async(dispatch_get_main_queue(), ^{
-        //[self.tableView reloadData];
-//        NSArray *cells = [self.tableView visibleCells];
         NSArray *visiblePaths = [self.tableView indexPathsForVisibleRows];
-//        for (PCTFeedTableViewCell* cell in cells) {
-//            [cell.pictureImageView updateImageFromCache];
-//        }
         for(NSIndexPath *indexPath in visiblePaths) {
             PCTFeedTableViewCell* cell = (id)[self.tableView cellForRowAtIndexPath:indexPath];
-            [cell.pictureImageView updateImageFromCache];
+            NSString* tmpUrlString = [notification.userInfo objectForKey:@"urlString"] ;
+            if ([[[_loader rowAtIndex:indexPath.row]imageHref] isEqualToString:tmpUrlString]) {
+                [cell.pictureImageView updateImageFromCache];
+                [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            }
         }
     });
 }
@@ -97,7 +96,7 @@
 }
 
 - (void)showImageCache {
-    [self.navigationController pushViewController:[PCTImageCacheTableViewController new] animated:YES];
+    [self.navigationController pushViewController:[[PCTImageCacheTableViewController new] autorelease] animated:YES];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
@@ -143,6 +142,25 @@
 
     return cell;
 }
+#pragma mark - UIScrollViewDelegate
+
+//// -------------------------------------------------------------------------------
+////	scrollViewDidEndDragging:willDecelerate:
+////  Load images for all onscreen rows when scrolling is finished.
+//// -------------------------------------------------------------------------------
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+//{
+//        [self.tableView reloadData];
+//}
+//
+//// -------------------------------------------------------------------------------
+////	scrollViewDidEndDecelerating:scrollView
+////  When scrolling stops, proceed to load the app icons that are on screen.
+//// -------------------------------------------------------------------------------
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+//{
+//        [self.tableView reloadData];
+//}
 
 - (void)dealloc {
     [_loader release];

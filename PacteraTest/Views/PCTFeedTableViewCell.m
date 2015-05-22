@@ -22,11 +22,9 @@ CGSize textSizeUsingBlackFont(NSString * text) {
 }
 
 CGFloat imageHeight(NSString * stringUrl) {
-    if ([[PCTImageCache sharedCache] objectForKey:stringUrl]) {
-        UIImage *image = [[PCTImageCache sharedCache] objectForKey:stringUrl];
-        if (image.size.width > 0) {
-            return image.size.height * (((CELL_WIDTH * (1.f/3.f)) - 24) / image.size.width);
-        }
+    UIImage *image = [[PCTImageCache sharedCache] objectForKey:stringUrl];
+    if (image && image.size.width > 0) {
+        return image.size.height * (((CELL_WIDTH * (1.f/3.f)) - 24) / image.size.width);
     }
     return 0;
 }

@@ -14,7 +14,7 @@
 @interface PCTFeedLoader()
 {
     // holder of JSON
-    NSDictionary *_data;
+    NSMutableDictionary *_data;
 }
 @end
 
@@ -37,8 +37,15 @@
         CJSONDeserializer *deserializer = [CJSONDeserializer deserializer];
         deserializer.nullObject = NULL;
         NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-        _data = [[deserializer deserialize:jsonData error:&error] copy];
-        
+        _data = [[deserializer deserialize:jsonData error:&error] mutableCopy];
+        NSMutableArray* array = [[_data[@"rows"] mutableCopy] autorelease];
+        int j = 0;
+        for (int i = 0; i < [_data[@"rows"] count]; i++, j++) {
+            if ([_data[@"rows"][i] count] == 0) {
+                [array removeObjectAtIndex:j--];
+            }
+        }
+        [_data setObject:array forKey:@"rows"];
         // notify whoever listen
         [[NSNotificationCenter defaultCenter] postNotificationName:kDataUpdated object:self];
     });
