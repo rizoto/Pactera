@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C6BBAE81B12C8EA0021B7D3 /* PCTImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BBAE71B12C8EA0021B7D3 /* PCTImageViewController.m */; };
 		2CEC50671B0DB704000E29B9 /* PCTImageCacheTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC50661B0DB704000E29B9 /* PCTImageCacheTableViewController.m */; };
 		70374D131AB24D600014C21B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D121AB24D600014C21B /* main.m */; };
 		70374D161AB24D600014C21B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70374D151AB24D600014C21B /* AppDelegate.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C6BBAE61B12C8EA0021B7D3 /* PCTImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTImageViewController.h; path = Controllers/PCTImageViewController.h; sourceTree = "<group>"; };
+		2C6BBAE71B12C8EA0021B7D3 /* PCTImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTImageViewController.m; path = Controllers/PCTImageViewController.m; sourceTree = "<group>"; };
 		2CEC50651B0DB704000E29B9 /* PCTImageCacheTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCTImageCacheTableViewController.h; path = Controllers/PCTImageCacheTableViewController.h; sourceTree = "<group>"; };
 		2CEC50661B0DB704000E29B9 /* PCTImageCacheTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCTImageCacheTableViewController.m; path = Controllers/PCTImageCacheTableViewController.m; sourceTree = "<group>"; };
 		70374D0D1AB24D600014C21B /* PacteraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacteraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +249,8 @@
 				70374D671AB250F50014C21B /* PCTFeedTableViewController.m */,
 				2CEC50651B0DB704000E29B9 /* PCTImageCacheTableViewController.h */,
 				2CEC50661B0DB704000E29B9 /* PCTImageCacheTableViewController.m */,
+				2C6BBAE61B12C8EA0021B7D3 /* PCTImageViewController.h */,
+				2C6BBAE71B12C8EA0021B7D3 /* PCTImageViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				70374D131AB24D600014C21B /* main.m in Sources */,
 				70374D731AB253B20014C21B /* PCTImageCache.m in Sources */,
 				70374D5A1AB24EE00014C21B /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				2C6BBAE81B12C8EA0021B7D3 /* PCTImageViewController.m in Sources */,
 				70374D791AB254A40014C21B /* PCTFeedLoader.m in Sources */,
 				70374D5C1AB24EE00014C21B /* CJSONSerializedData.m in Sources */,
 				70374D581AB24EE00014C21B /* CDataScanner.m in Sources */,
@@ -451,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -486,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

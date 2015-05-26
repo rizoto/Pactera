@@ -13,6 +13,7 @@
 #import "PCTFeedLoader.h"
 #import "PCTFeedTableViewCell.h"
 #import "PCTImageCacheTableViewController.h"
+#import "PCTImageViewController.h"
 
 @interface PCTFeedTableViewController ()
 {
@@ -141,6 +142,14 @@
     cell.pictureImageView.urlString = record.imageHref;
 
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Cell selected");
+    PCTFeedTableViewCell* cell = (PCTFeedTableViewCell*)[self.tableView cellForRowAtIndexPath:indexPath];
+    if (cell) {
+        [self.navigationController pushViewController:[[[PCTImageViewController alloc] initWithView:cell.pictureImageView] autorelease] animated:NO];
+    }
 }
 #pragma mark - UIScrollViewDelegate
 

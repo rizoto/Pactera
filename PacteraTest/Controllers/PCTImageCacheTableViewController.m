@@ -36,7 +36,7 @@ static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
     [super viewDidLoad];
     [self.tableView registerClass:[MyTableViewCell class] forCellReuseIdentifier:CellIdentifier];
     [self.tableView registerClass:[MyTableViewCell class] forCellReuseIdentifier:PlaceholderCellIdentifier];
-    keys = [[[PCTImageCache sharedCache] loadingURLs] allObjects];
+    keys = [[[[PCTImageCache sharedCache] loadingURLs] allObjects] copy];
 }
 
 - (void)didReceiveMemoryWarning {

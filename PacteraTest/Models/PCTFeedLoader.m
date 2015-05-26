@@ -33,6 +33,10 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void) {
         NSError *error;
         NSData *json = [NSData dataWithContentsOfURL:[NSURL URLWithString:JSON_URL]];
+        if (!json) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:kDataUpdated object:self];
+            return;
+        }
         NSString *jsonString = [NSString stringWithCString:[json bytes] encoding:NSASCIIStringEncoding];
         CJSONDeserializer *deserializer = [CJSONDeserializer deserializer];
         deserializer.nullObject = NULL;
